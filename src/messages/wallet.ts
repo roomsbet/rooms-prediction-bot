@@ -23,7 +23,9 @@ export function formatWalletMessage(data: WalletData): string {
 
 ━━━━━━━━━━━━━━━━━━
 
-_Choose an action below:_`;
+_Choose an action below:_
+
+_Trusted by Helius • Powered by Turnkey_`;
 }
 
 export function formatDepositMessage(address: string): string {
@@ -39,7 +41,9 @@ Send SOL to this address:
 • Funds will be credited after 1 confirmation
 • Do not send from exchanges directly
 
-Your balance will update automatically once the transaction is confirmed.`;
+Your balance will update automatically once the transaction is confirmed.
+
+_Transactions powered by Helius RPC infrastructure_`;
 }
 
 export function formatWithdrawMessage(): string {

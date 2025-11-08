@@ -29,7 +29,9 @@ export function formatReferralsMessage(data: ReferralData, referralLink: string)
 • 5% of protocol fees from referred users
 • Lifetime earnings (no expiration)
 
-_Share your link below to start earning!_`;
+_Share your link below to start earning!_
+
+_Trusted by Helius • Powered by Turnkey_`;
 }
 
 export function formatRulesMessage(): string {
@@ -68,12 +70,14 @@ export function formatRulesMessage(): string {
 • View your wins in "🏆 Rooms Won"
 
 *Security:*
-• Your wallet is encrypted and secure
+• Your wallet is encrypted and secure via Turnkey
 • Private keys never shared
-• All transactions on Solana blockchain
+• All transactions on Solana blockchain (powered by Helius)
 • You control your funds
 
 ━━━━━━━━━━━━━━━━━━
+
+_Trusted by Helius • Powered by Turnkey • Built on Solana_
 
 _Ready to bet? Enter a room and make your prediction!_`;
 }

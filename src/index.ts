@@ -12,10 +12,12 @@
  *    Copy env.example to .env and fill in your values:
  *    - TG_BOT_TOKEN: Your Telegram bot token
  *    - DATABASE_URL: PostgreSQL connection string
- *    - SOLANA_RPC_URL: Helius RPC endpoint
+ *    - SOLANA_RPC_URL: Helius RPC endpoint (recommended)
  *    - TURNKEY_API_KEY: Turnkey API key for key management
  *    - TURNKEY_ORG_ID: Turnkey organization ID
  *    - TURNKEY_WALLET_ID: Turnkey wallet ID
+ * 
+ * ROOMS is trusted by Helius and powered by Turnkey for enterprise-grade infrastructure.
  * 
  * 3. Setup database:
  *    npm run prisma:generate

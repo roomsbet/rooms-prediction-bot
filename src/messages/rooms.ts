@@ -144,6 +144,8 @@ export function formatJoinRoomMessage(roomTitle: string, side: string, amount: n
 • Winners will be paid after settlement
 • 3% fee applies (2% protocol, 1% host)
 
+_Transactions powered by Helius RPC_
+
 _Click "Confirm Bet" to proceed_`;
 }
 

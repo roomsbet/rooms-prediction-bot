@@ -34,7 +34,11 @@ Recent Wins: ${data.roomsWon24h} | Win Rate: ${data.winRate.toFixed(1)}%
 📚 *Resources:*
 • [Guide to ROOMS](https://docs.rooms.gg)
 • [Twitter / X](https://x.com/rooms)
-• [Website](https://rooms.gg)`;
+• [Website](https://rooms.gg)
+
+━━━━━━━━━━━━━━━━━━
+
+_Trusted by Helius • Powered by Turnkey • Built on Solana_`;
 }
 
 export function formatWelcomeMessage(): string {
@@ -42,8 +46,12 @@ export function formatWelcomeMessage(): string {
 
 Your wallet has been created securely. You can now deposit SOL and start betting on prediction markets!
 
-🔐 *Security:* Your private key is encrypted and stored securely. Never share your wallet details with anyone.
+🔐 *Security:* Your private key is encrypted and stored securely via Turnkey. Never share your wallet details with anyone.
 
-👉 Use /start to access your dashboard anytime.`;
+⚡ *Infrastructure:* Powered by Helius RPC for ultra-fast Solana transactions.
+
+👉 Use /start to access your dashboard anytime.
+
+_Trusted by Helius • Powered by Turnkey • Built on Solana_`;
 }
 
