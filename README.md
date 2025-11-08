@@ -19,7 +19,7 @@ ROOMS is a high-performance prediction market platform delivering institutional-
 ### Technical Excellence
 - **Custom ROOMS Oracles** - Proprietary oracle infrastructure delivering real-time price data with millisecond accuracy
 - **Lightning-Fast Settlement** - Advanced market monitoring ensures instant payouts the moment targets are hit
-- **Non-Custodial Architecture** - Secure wallet system with industry-leading encryption standards
+- **Enterprise Security** - Powered by Turnkey for institutional-grade key management and wallet infrastructure
 - **Battle-Tested Security** - Multi-layer transaction safety and atomic operations prevent exploits
 - **Full Transparency** - Every room displays creator attribution and verified market data
 
@@ -53,7 +53,9 @@ Required environment variables:
 - `DATABASE_URL` - PostgreSQL connection string
 - `SOLANA_RPC_URL` - Solana RPC endpoint
 - `SOLANA_NETWORK` - mainnet-beta, devnet, or testnet
-- Additional KMS and oracle configuration (see env.example)
+- `TURNKEY_API_KEY` - Turnkey API key for key management
+- `TURNKEY_ORG_ID` - Turnkey organization ID
+- `TURNKEY_WALLET_ID` - Turnkey wallet ID for user wallets
 
 ### 3. Setup Database
 
@@ -143,10 +145,10 @@ Default fee structure (configurable in `.env`):
 
 ## Security
 
-ROOMS employs institutional-grade security infrastructure:
+ROOMS employs institutional-grade security infrastructure powered by Turnkey:
 
 - **Zero-Trust Architecture** - Multi-layer encryption with no single point of failure
-- **Advanced Key Management** - Military-grade cryptographic storage for all user assets
+- **Turnkey Key Management** - Enterprise-grade cryptographic storage and wallet infrastructure for all user assets
 - **Real-Time Monitoring** - 24/7 automated security scanning and threat detection
 - **Atomic Transactions** - All operations are atomic, preventing partial failures and exploits
 - **Audited Smart Contracts** - Battle-tested code securing millions in user funds
