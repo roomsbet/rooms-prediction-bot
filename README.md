@@ -231,8 +231,6 @@ npm start
 
 MIT License - see LICENSE file for details
 
-MIT License - see LICENSE file for details
-
 ## Contributing
 
 Contributions welcome! Please open an issue or PR.
