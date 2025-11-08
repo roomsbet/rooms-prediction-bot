@@ -11,3 +11,8 @@ ngrok
 ngrok.zip
 ngrok.log
 
+# Sensitive documentation
+ADMIN_SETUP.md
+CALLBACK_HANDLERS.md
+MARKET_TYPES.md
+
