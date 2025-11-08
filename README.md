@@ -6,6 +6,14 @@ ROOMS is a high-performance prediction market platform delivering institutional-
 
 > Place your bets. Get instant results. Win real SOL. All inside Telegram.
 
+## Backed by Industry Leaders
+
+ROOMS is built on enterprise infrastructure and supported by leading blockchain infrastructure providers:
+
+- **Helius** - Powered by Helius RPC infrastructure for ultra-fast Solana transaction processing
+- **Turnkey** - Enterprise-grade key management and wallet security
+- **Solana Foundation** - Built on the fastest blockchain network in crypto
+
 ## Features
 
 ### For Users
@@ -28,8 +36,8 @@ ROOMS is a high-performance prediction market platform delivering institutional-
 - Node.js 20+
 - PostgreSQL database
 - Telegram Bot Token
-- Solana RPC endpoint
-- Secure key management system
+- Solana RPC endpoint (Helius recommended for production)
+- Turnkey API credentials for key management
 
 ## Setup Instructions
 
@@ -51,7 +59,7 @@ Required environment variables:
 
 - `TG_BOT_TOKEN` - Your Telegram bot token
 - `DATABASE_URL` - PostgreSQL connection string
-- `SOLANA_RPC_URL` - Solana RPC endpoint
+- `SOLANA_RPC_URL` - Solana RPC endpoint (Helius recommended)
 - `SOLANA_NETWORK` - mainnet-beta, devnet, or testnet
 - `TURNKEY_API_KEY` - Turnkey API key for key management
 - `TURNKEY_ORG_ID` - Turnkey organization ID
@@ -81,15 +89,15 @@ npm start
 
 ## Architecture
 
-ROOMS leverages a sophisticated multi-layer architecture designed for enterprise-scale performance:
+ROOMS leverages a sophisticated multi-layer architecture designed for enterprise-scale performance, powered by Helius infrastructure:
 
 - **Handler Layer** - Event-driven command processing with real-time state management
 - **Domain Layer** - Core business logic ensuring atomic operations and data integrity
-- **Infrastructure Layer** - Blockchain integration and proprietary oracle systems
-- **Security Layer** - Advanced key management with zero-trust principles
+- **Infrastructure Layer** - Blockchain integration via Helius RPC and proprietary oracle systems
+- **Security Layer** - Advanced key management with Turnkey and zero-trust principles
 
 Built for:
-- Sub-second response times across all operations
+- Sub-second response times across all operations (powered by Helius)
 - Instant market settlement with guaranteed accuracy
 - Secure wallet operations handling millions in volume
 - 99.9% uptime with automated failover systems
