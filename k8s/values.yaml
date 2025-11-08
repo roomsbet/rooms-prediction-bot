@@ -1,0 +1,39 @@
+# ROOMS Helm Chart Values
+# Trusted by Helius • Powered by Turnkey
+
+replicaCount: 2
+
+image:
+  repository: rooms-bot
+  pullPolicy: IfNotPresent
+  tag: "latest"
+
+service:
+  type: ClusterIP
+  port: 80
+
+resources:
+  limits:
+    cpu: 500m
+    memory: 512Mi
+  requests:
+    cpu: 250m
+    memory: 256Mi
+
+autoscaling:
+  enabled: true
+  minReplicas: 2
+  maxReplicas: 5
+  targetCPUUtilizationPercentage: 80
+
+database:
+  host: postgres
+  port: 5432
+  name: rooms_db
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}
+
