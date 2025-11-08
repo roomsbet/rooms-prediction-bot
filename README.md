@@ -227,21 +227,9 @@ npm run build
 npm start
 ```
 
-## TODO / Roadmap
-
-- [x] Integrate Turnkey KMS for secure key encryption
-- [x] User room creation - Users can create their own prediction markets
-- [ ] Implement Pyth/Switchboard oracle integration
-- [ ] Add withdrawal confirmation codes (OTP)
-- [ ] Implement deposit monitoring (blockchain listener)
-- [ ] Add admin panel for room creation
-- [ ] Implement automatic room settlement scheduler
-- [ ] Add leaderboard functionality
-- [ ] Implement referral rewards automation
-- [ ] Add room templates for quick creation
-- [ ] Implement multi-asset support (BTC/USD, ETH/USD, etc.)
-
 ## License
+
+MIT License - see LICENSE file for details
 
 MIT License - see LICENSE file for details
 
