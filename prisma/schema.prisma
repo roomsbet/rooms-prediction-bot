@@ -1,0 +1,178 @@
+// ROOMS Bot - Prisma Schema
+// Based on rooms-bot-spec.md
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// User wallet and profile
+model User {
+  id              String        @id @default(cuid())
+  telegramId      BigInt        @unique @map("telegram_id")
+  username        String?
+  walletAddress   String        @unique @map("wallet_address")
+  encryptedKey    String        @map("encrypted_key") // KMS-encrypted private key
+  balance         Decimal       @default(0) @db.Decimal(18, 9)
+  totalDeposited  Decimal       @default(0) @map("total_deposited") @db.Decimal(18, 9)
+  totalWithdrawn  Decimal       @default(0) @map("total_withdrawn") @db.Decimal(18, 9)
+  referralCode    String        @unique @map("referral_code")
+  referredBy      String?       @map("referred_by")
+  createdAt       DateTime      @default(now()) @map("created_at")
+  updatedAt       DateTime      @updatedAt @map("updated_at")
+  
+  bets            Bet[]
+  transactions    Transaction[]
+  referralsGiven  Referral[]    @relation("ReferrerRelation")
+  referralsReceived Referral[]  @relation("ReferredRelation")
+  
+  @@map("users")
+}
+
+// Prediction market rooms
+model Room {
+  id              String        @id @default(cuid())
+  title           String
+  description     String?
+  status          RoomStatus    @default(QUEUING)
+  oracleFeed      String        @map("oracle_feed") // e.g., "SOL/USD"
+  oracleSource    String        @default("PYTH") @map("oracle_source")
+  cap             Int           @default(10) // Max players
+  currentPlayers  Int           @default(0) @map("current_players")
+  pool            Decimal       @default(0) @db.Decimal(18, 9)
+  longPool        Decimal       @default(0) @map("long_pool") @db.Decimal(18, 9)
+  shortPool       Decimal       @default(0) @map("short_pool") @db.Decimal(18, 9)
+  minBet          Decimal       @map("min_bet") @db.Decimal(18, 9)
+  maxBet          Decimal?      @map("max_bet") @db.Decimal(18, 9)
+  lockTime        DateTime      @map("lock_time")
+  settleTime      DateTime      @map("settle_time")
+  lockPrice       Decimal?      @map("lock_price") @db.Decimal(18, 9)
+  settlePrice     Decimal?      @map("settle_price") @db.Decimal(18, 9)
+  winningSide     String?       @map("winning_side") // "YES" or "NO"
+  protocolFee     Decimal       @default(0) @map("protocol_fee") @db.Decimal(18, 9)
+  hostFee         Decimal       @default(0) @map("host_fee") @db.Decimal(18, 9)
+  hostUserId      String?       @map("host_user_id")
+  
+  // Group Chat Arena Fields
+  groupChatId     String?       @unique @map("group_chat_id") // Telegram group ID (legacy)
+  chatId          String?       @map("chat_id") // Telegram group chat ID (from ChatPool)
+  inviteLink      String?       @map("invite_link") // Group invite link
+  
+  // Market Type Fields
+  marketType      String?       @map("market_type") // "solprice", "pumpfun_mcap", "custom"
+  targetValue     Decimal?      @map("target_value") @db.Decimal(18, 9) // Target price/mcap
+  targetDate      DateTime?     @map("target_date") // When to check condition
+  tokenAddress    String?       @map("token_address") // For pumpfun markets
+  tokenSymbol     String?       @map("token_symbol") // Display symbol
+  settledAt       DateTime?     @map("settled_at") // When room was settled
+  
+  createdAt       DateTime      @default(now()) @map("created_at")
+  updatedAt       DateTime      @updatedAt @map("updated_at")
+  
+  bets            Bet[]
+  
+  @@map("rooms")
+}
+
+enum RoomStatus {
+  QUEUING     // Accepting queue joins, not launched yet
+  OPEN        // Arena launched, accepting bets
+  LOCKED      // Betting closed
+  SETTLED     // Market settled
+  CANCELLED
+  ARCHIVED
+}
+
+// User bets in rooms
+model Bet {
+  id              String        @id @default(cuid())
+  userId          String        @map("user_id")
+  roomId          String        @map("room_id")
+  side            BetSide       // YES or NO
+  amount          Decimal       @db.Decimal(18, 9)
+  status          BetStatus     @default(QUEUED) // New: Queue system
+  settled         Boolean       @default(false)
+  won             Boolean?
+  payout          Decimal       @default(0) @db.Decimal(18, 9)
+  createdAt       DateTime      @default(now()) @map("created_at")
+  updatedAt       DateTime      @updatedAt @map("updated_at")
+  
+  user            User          @relation(fields: [userId], references: [id])
+  room            Room          @relation(fields: [roomId], references: [id])
+  
+  @@map("bets")
+}
+
+enum BetStatus {
+  QUEUED      // Waiting for arena launch
+  ACTIVE      // Arena launched, bet is active
+  SETTLED     // Bet has been settled
+}
+
+enum BetSide {
+  YES
+  NO
+}
+
+// Transaction ledger
+model Transaction {
+  id              String        @id @default(cuid())
+  userId          String        @map("user_id")
+  type            TransactionType
+  amount          Decimal       @db.Decimal(18, 9)
+  txSignature     String?       @map("tx_signature") // Solana tx signature
+  status          TransactionStatus @default(PENDING)
+  metadata        Json?         // Additional data (room_id, bet_id, etc.)
+  createdAt       DateTime      @default(now()) @map("created_at")
+  
+  user            User          @relation(fields: [userId], references: [id])
+  
+  @@map("transactions")
+}
+
+enum TransactionType {
+  DEPOSIT
+  WITHDRAW
+  BET
+  WIN
+  FEE
+  REFERRAL_REWARD
+}
+
+enum TransactionStatus {
+  PENDING
+  CONFIRMED
+  FAILED
+}
+
+// Referral tracking
+model Referral {
+  id              String        @id @default(cuid())
+  referrerId      String        @map("referrer_id")
+  referredId      String        @map("referred_id")
+  rewardsEarned   Decimal       @default(0) @map("rewards_earned") @db.Decimal(18, 9)
+  createdAt       DateTime      @default(now()) @map("created_at")
+  
+  referrer        User          @relation("ReferrerRelation", fields: [referrerId], references: [id])
+  referred        User          @relation("ReferredRelation", fields: [referredId], references: [id])
+  
+  @@unique([referrerId, referredId])
+  @@map("referrals")
+}
+
+// Chat Pool - Reusable Telegram groups for rooms
+model ChatPool {
+  id              String        @id @default(cuid())
+  chatId          String        @unique @map("chat_id") // Telegram group chat ID
+  status          String        @default("FREE") // "FREE" | "ASSIGNED"
+  roomId          String?       @map("room_id")
+  createdAt       DateTime      @default(now()) @map("created_at")
+  updatedAt       DateTime      @updatedAt @map("updated_at")
+  
+  @@map("chat_pool")
+}
+
