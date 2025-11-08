@@ -8,11 +8,11 @@ ROOMS is a blazing-fast Telegram bot that lets you bet on real-time crypto price
 
 ## Features
 
-### For Players
+### For Users
 - **Instant Settlements** - Oracle monitors markets 24/7 and settles rooms the moment targets are hit
 - **Push Notifications** - Get notified instantly when you win or lose with personalized payout details
 - **Beautiful UI** - Smooth inline keyboard experience with no page refreshes or clunky navigation
-- **Create Your Own Rooms** - Users can launch custom prediction markets in seconds
+- **Create Your Own Rooms** - Launch custom prediction markets in seconds with a simple guided flow. Choose market type (Coin Price, Pump.fun Market Cap), set your target, select settlement time, and deploy instantly
 - **Any Coin, Any Target** - Bet on SOL, Bitcoin, Ethereum, Pump.fun tokens, or any cryptocurrency
 - **Referral Rewards** - Earn from every bet your referrals place
 
@@ -91,7 +91,8 @@ ROOMS PROJ/
 │   │   ├── wallet.ts         # Wallet operations
 │   │   ├── rooms.ts          # Room browsing and joining
 │   │   ├── bets.ts           # Bet tracking
-│   │   └── referrals.ts      # Referral system
+│   │   ├── referrals.ts      # Referral system
+│   │   └── userRoomCreation.ts # User room creation flow
 │   ├── keyboards/            # Inline keyboard definitions
 │   │   ├── dashboard.ts
 │   │   ├── wallet.ts
@@ -127,9 +128,15 @@ ROOMS PROJ/
 
 1. Start the bot: Send `/start` to your bot
 2. Deposit SOL: Use the Wallet → Deposit flow
-3. Browse rooms: Click "🟢 Enter Available Rooms"
-4. Place bets: Select a room, choose LONG or SHORT, confirm
-5. Win SOL: Payouts are automatic after settlement
+3. Browse rooms: Click "Enter Available Rooms" to see active prediction markets
+4. Create your own room: Click "Create Room" to launch a custom prediction market
+   - Choose market type (Coin Price, Pump.fun Market Cap)
+   - Set your question/title
+   - Set target value (price or market cap)
+   - Select settlement time (15min, 30min, 1h, 2h, 4h, or custom)
+   - Deploy and your room goes live instantly
+5. Place bets: Select a room, choose LONG or SHORT, confirm
+6. Win SOL: Payouts are automatic after settlement
 
 ### Dashboard Commands
 
@@ -138,6 +145,7 @@ ROOMS PROJ/
 - **Referrals** - View your referral code and earnings
 - **Rooms Won** - See your winning history
 - **Recent Rooms** - View rooms you've participated in
+- **Create Room** - Launch your own prediction market (available in rooms list)
 - **Rules** - Learn how ROOMS works
 - **Refresh** - Update dashboard stats
 
@@ -222,6 +230,7 @@ npm start
 ## TODO / Roadmap
 
 - [x] Integrate Turnkey KMS for secure key encryption
+- [x] User room creation - Users can create their own prediction markets
 - [ ] Implement Pyth/Switchboard oracle integration
 - [ ] Add withdrawal confirmation codes (OTP)
 - [ ] Implement deposit monitoring (blockchain listener)
