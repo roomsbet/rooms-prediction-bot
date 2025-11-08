@@ -112,14 +112,14 @@ Built for:
 
 ### Dashboard Commands
 
-- **Wallet** - View balance, deposit, withdraw
-- **My Bets** - Track active and historical bets
-- **Referrals** - View your referral code and earnings
-- **Rooms Won** - See your winning history
-- **Recent Rooms** - View rooms you've participated in
-- **Create Room** - Launch your own prediction market (available in rooms list)
-- **Rules** - Learn how ROOMS works
-- **Refresh** - Update dashboard stats
+- **/wallet** - View balance, deposit, withdraw
+- **/bets** - Track active and historical bets
+- **/referrals** - View your referral code and earnings
+- **/won** - See your winning history
+- **/rooms** - View rooms you've participated in
+- **/create** - Launch your own prediction market (available in rooms list)
+- **/rules** - Learn how ROOMS works
+- **/refresh** - Update dashboard stats
 
 ## Configuration
 
