@@ -1,0 +1,37 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:15-alpine
+    environment:
+      POSTGRES_USER: rooms
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+      POSTGRES_DB: rooms_db
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U rooms"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  bot:
+    build: .
+    depends_on:
+      postgres:
+        condition: service_healthy
+    environment:
+      DATABASE_URL: postgresql://rooms:${DB_PASSWORD}@postgres:5432/rooms_db
+      TG_BOT_TOKEN: ${TG_BOT_TOKEN}
+      SOLANA_RPC_URL: ${SOLANA_RPC_URL}
+      SOLANA_NETWORK: ${SOLANA_NETWORK}
+      TURNKEY_API_KEY: ${TURNKEY_API_KEY}
+      TURNKEY_ORG_ID: ${TURNKEY_ORG_ID}
+      TURNKEY_WALLET_ID: ${TURNKEY_WALLET_ID}
+    restart: unless-stopped
+
+volumes:
+  postgres_data:
+

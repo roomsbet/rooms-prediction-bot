@@ -1,0 +1,16 @@
+node_modules
+dist
+.env
+.git
+.gitignore
+*.log
+.DS_Store
+.vscode
+.idea
+ngrok
+ngrok.zip
+ngrok.log
+ADMIN_SETUP.md
+CALLBACK_HANDLERS.md
+MARKET_TYPES.md
+
