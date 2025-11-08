@@ -10,9 +10,12 @@
  * 
  * 2. Setup environment variables:
  *    Copy env.example to .env and fill in your values:
- *    - TG_BOT_TOKEN: Get from @BotFather on Telegram
+ *    - TG_BOT_TOKEN: Your Telegram bot token
  *    - DATABASE_URL: PostgreSQL connection string
  *    - SOLANA_RPC_URL: Helius RPC endpoint
+ *    - TURNKEY_API_KEY: Turnkey API key for key management
+ *    - TURNKEY_ORG_ID: Turnkey organization ID
+ *    - TURNKEY_WALLET_ID: Turnkey wallet ID
  * 
  * 3. Setup database:
  *    npm run prisma:generate

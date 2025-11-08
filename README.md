@@ -19,16 +19,18 @@ ROOMS is a blazing-fast Telegram bot that lets you bet on real-time crypto price
 ### Technical Excellence
 - **Real-time Price Feeds** - Multi-source oracle system (CryptoCompare, Binance, CoinGecko, DexScreener)
 - **Instant Oracle Resolution** - 3-second polling for Pump.fun tokens and live price tracking
-- **Custodial Wallets** - Seamless SOL wallet creation inside Telegram
+- **Custodial Wallets** - Seamless SOL wallet creation inside Telegram powered by Turnkey
 - **Transaction Safety** - Duplicate bet prevention and atomic database operations
 - **User Attribution** - Every room shows who created it with automatic @username linking
+- **Secure Key Management** - Enterprise-grade key storage via Turnkey KMS
 
 ## Requirements
 
 - Node.js 20+
 - PostgreSQL database
-- Telegram Bot Token (from [@BotFather](https://t.me/BotFather))
+- Telegram Bot Token
 - Solana RPC endpoint (Helius recommended)
+- Turnkey API credentials for key management
 
 ## Setup Instructions
 
@@ -48,10 +50,13 @@ cp env.example .env
 
 Required environment variables:
 
-- `TG_BOT_TOKEN` - Your Telegram bot token from @BotFather
+- `TG_BOT_TOKEN` - Your Telegram bot token
 - `DATABASE_URL` - PostgreSQL connection string
 - `SOLANA_RPC_URL` - Helius or other Solana RPC endpoint
 - `SOLANA_NETWORK` - mainnet-beta, devnet, or testnet
+- `TURNKEY_API_KEY` - Turnkey API key for key management
+- `TURNKEY_ORG_ID` - Turnkey organization ID
+- `TURNKEY_WALLET_ID` - Turnkey wallet ID for user wallets
 
 ### 3. Setup Database
 
@@ -162,9 +167,10 @@ Default fee structure (configurable in `.env`):
 
 ### Key Management
 
-- Private keys encrypted via KMS (Turnkey integration recommended)
-- Placeholder encryption for development (⚠️ NOT secure for production)
-- Hot/cold wallet split recommended for production
+- Private keys managed securely via Turnkey KMS
+- Enterprise-grade key storage and encryption
+- Hot/cold wallet split for production deployments
+- No private keys stored in application code or databases
 
 ### Best Practices
 
@@ -215,7 +221,7 @@ npm start
 
 ## TODO / Roadmap
 
-- [ ] Integrate real Turnkey KMS for key encryption
+- [x] Integrate Turnkey KMS for secure key encryption
 - [ ] Implement Pyth/Switchboard oracle integration
 - [ ] Add withdrawal confirmation codes (OTP)
 - [ ] Implement deposit monitoring (blockchain listener)
