@@ -2,41 +2,26 @@
 
 * [Introduction](README.md)
 
-## GETTING STARTED
+## Getting Started
 
 * [The Problem](getting-started/the-problem.md)
-* [Quick Start](getting-started/quick-start.md)
+* [Quick Start Guide](getting-started/quick-start.md)
 
-## MARKET CONTEXT
+## Market Context
 
-* [Solana Prediction Markets](market-context/solana-markets.md)
-* [The Oracle Challenge](market-context/oracle-challenge.md)
+* [Prediction Market Landscape](market-context/market-landscape.md)
 
-## PROTOCOL MECHANICS
+## Protocol Mechanics
 
-* [System Overview](protocol-mechanics/system-overview.md)
-* [Instant Settlement](protocol-mechanics/instant-settlement.md)
-* [Parimutuel Pools](protocol-mechanics/parimutuel-pools.md)
-* [Custom ROOMS Oracles](protocol-mechanics/oracle-integration.md)
-* [Platform Fees](protocol-mechanics/platform-fees.md)
-* [Referral System](protocol-mechanics/referral-system.md)
-* [User Room Creation](protocol-mechanics/user-room-creation.md)
+* [System Architecture](protocol-mechanics/system-architecture.md)
+* [Oracle Infrastructure](protocol-mechanics/oracle-infrastructure.md)
+* [Economics & Fees](protocol-mechanics/economics.md)
 
-## HOW TO USE
+## Technical Reference
 
-* [Getting Started](how-to-use/getting-started.md)
-* [Placing Bets](how-to-use/placing-bets.md)
-* [Understanding Odds](how-to-use/understanding-odds.md)
-* [Claiming Winnings](how-to-use/claiming-winnings.md)
-* [Creating Rooms](how-to-use/creating-rooms.md)
+* [Architecture & Security](technical/architecture-security.md)
+* [API Documentation](technical/api-reference.md)
 
-## MARKET RULES
+## Legal & Compliance
 
-* [Market Guidelines](market-rules/market-guidelines.md)
-
-## TECHNICAL
-
-* [Architecture](technical/architecture.md)
-* [Security](technical/security.md)
-* [API Reference](technical/api-reference.md)
-
+* [Terms & Risk Disclosure](legal/terms.md)

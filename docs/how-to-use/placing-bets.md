@@ -62,10 +62,10 @@ Each room has:
 
 ## Common Mistakes
 
-❌ **Betting without understanding** - Read the question!  
-❌ **Ignoring pool sizes** - Affects your payout  
-❌ **Betting too much** - Manage your bankroll  
-❌ **Not checking time** - Room might lock soon  
+**Betting without understanding** - Read the question!  
+**Ignoring pool sizes** - Affects your payout  
+**Betting too much** - Manage your bankroll  
+**Not checking time** - Room might lock soon  
 
 ---
 

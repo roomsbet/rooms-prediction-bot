@@ -12,8 +12,8 @@ ROOMS uses a transparent, fair fee structure:
 
 Fees are only charged on **winning bets**:
 
-- ✅ **You win** → 3% fee deducted from your payout
-- ❌ **You lose** → No fees (you just lose your bet)
+- **You win** → 3% fee deducted from your payout
+- **You lose** → No fees (you just lose your bet)
 
 ### Example
 
@@ -46,11 +46,11 @@ Rewards room creators:
 ## No Hidden Fees
 
 ROOMS is transparent:
-- ✅ No deposit fees
-- ✅ No withdrawal fees (only network fees ~0.000005 SOL)
-- ✅ No bet placement fees
-- ✅ Fees only on winnings
-- ✅ All fees clearly displayed
+- No deposit fees
+- No withdrawal fees (only network fees ~0.000005 SOL)
+- No bet placement fees
+- Fees only on winnings
+- All fees clearly displayed
 
 ## Fee Comparison
 

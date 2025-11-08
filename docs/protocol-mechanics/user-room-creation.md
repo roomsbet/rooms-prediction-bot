@@ -44,14 +44,14 @@ Anyone can create custom prediction markets on ROOMS in seconds.
 ## Room Guidelines
 
 ### Good Room Titles
-- ✅ Clear and specific: "Will SOL reach $165 by 6pm?"
-- ✅ Include timeframe: "Will BTC hit $100k in the next hour?"
-- ✅ Be accurate: Use correct token symbols
+- Clear and specific: "Will SOL reach $165 by 6pm?"
+- Include timeframe: "Will BTC hit $100k in the next hour?"
+- Be accurate: Use correct token symbols
 
 ### Bad Room Titles
-- ❌ Vague: "SOL moon?"
-- ❌ Missing details: "Price target"
-- ❌ Misleading: Wrong token or price
+- Vague: "SOL moon?"
+- Missing details: "Price target"
+- Misleading: Wrong token or price
 
 ## Host Rewards
 

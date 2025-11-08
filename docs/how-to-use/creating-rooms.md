@@ -58,16 +58,16 @@ Anyone can create prediction markets on ROOMS in seconds.
 ## Best Practices
 
 ### Good Room Titles
-✅ Clear and specific  
-✅ Include timeframe  
-✅ Use correct symbols  
-✅ Realistic targets  
+Clear and specific  
+Include timeframe  
+Use correct symbols  
+Realistic targets  
 
 ### Bad Room Titles
-❌ Vague or unclear  
-❌ Missing details  
-❌ Wrong token/price  
-❌ Impossible targets  
+Vague or unclear  
+Missing details  
+Wrong token/price  
+Impossible targets  
 
 ## Host Rewards
 

@@ -2,19 +2,48 @@
 
 ## Architecture
 
-ROOMS leverages a sophisticated multi-layer architecture designed for enterprise-scale performance, powered by Helius infrastructure:
+ROOMS leverages a sophisticated multi-layer architecture designed for enterprise-scale performance, powered by Helius infrastructure.
+
+```mermaid
+sequenceDiagram
+    participant U as User
+    participant T as Telegram Bot
+    participant H as Handler Layer
+    participant D as Domain Layer
+    participant DB as PostgreSQL
+    participant O as Oracle Network
+    participant S as Solana
+    participant TK as Turnkey KMS
+    
+    U->>T: Place Bet Command
+    T->>H: Parse & Validate
+    H->>D: Execute Bet Logic
+    D->>DB: Begin Transaction
+    DB-->>D: Lock Acquired
+    D->>TK: Sign Transaction
+    TK-->>D: Signed Payload
+    D->>S: Submit to Helius RPC
+    S-->>D: Confirmation
+    D->>DB: Commit Transaction
+    DB-->>D: Success
+    D->>O: Register for Settlement
+    O-->>D: Monitoring Active
+    D->>H: Bet Confirmed
+    H->>T: Update UI
+    T->>U: Success Notification
+```
 
 ### Handler Layer
-Event-driven command processing with real-time state management. Handles all user interactions and bot commands.
+Event-driven command processing with real-time state management. Processes all user interactions with sub-millisecond latency.
 
 ### Domain Layer
-Core business logic ensuring atomic operations and data integrity. Manages rooms, bets, wallets, and settlements.
+Core business logic ensuring atomic operations and data integrity. Implements ACID guarantees across distributed systems.
 
 ### Infrastructure Layer
-Blockchain integration via Helius RPC and proprietary oracle systems. Handles all external API calls and data feeds.
+Blockchain integration via Helius RPC and proprietary oracle systems. Multi-region deployment with automatic failover.
 
 ### Security Layer
-Advanced key management with Turnkey and zero-trust principles. Ensures user funds are always secure.
+Advanced key management with Turnkey HSM and zero-trust architecture. Military-grade encryption for all operations.
 
 ## Key Components
 

@@ -23,10 +23,10 @@ Solana is the perfect blockchain for prediction markets:
 
 Unlike Ethereum or other chains, Solana's architecture enables:
 
-✅ **Real-time betting** - No waiting for block confirmations  
-✅ **Instant payouts** - Winners receive funds immediately  
-✅ **Low fees** - 3% platform fee is the only cost  
-✅ **Scalability** - Handles millions of users without congestion  
+**Real-time betting** - No waiting for block confirmations  
+**Instant payouts** - Winners receive funds immediately  
+**Low fees** - 3% platform fee is the only cost  
+**Scalability** - Handles millions of users without congestion  
 
 ## Market Types on Solana
 
@@ -41,7 +41,6 @@ ROOMS supports all Solana-based markets:
 
 As Solana grows, ROOMS will support:
 
-- NFT floor price markets
 - DeFi protocol metrics
 - Cross-chain price arbitrage
 - Custom oracle integrations

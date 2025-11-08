@@ -23,12 +23,12 @@ Excessive fees eat into profits, making it unprofitable for small bettors to par
 
 ROOMS addresses every one of these problems:
 
-✅ **Instant Settlements** - Custom oracle infrastructure settles markets the moment conditions are met  
-✅ **Telegram-Native** - No apps to download, works entirely within Telegram  
-✅ **Any Market, Any Asset** - Users can create custom markets for any cryptocurrency  
-✅ **Enterprise Security** - Powered by Turnkey for bank-grade key management  
-✅ **Fair Fees** - Transparent 3% fee structure (2% protocol, 1% host)  
-✅ **Full Transparency** - Every room shows creator, odds, and settlement data  
+**Instant Settlements** - Custom oracle infrastructure settles markets the moment conditions are met  
+**Telegram-Native** - No apps to download, works entirely within Telegram  
+**Any Market, Any Asset** - Users can create custom markets for any cryptocurrency  
+**Enterprise Security** - Powered by Turnkey for bank-grade key management  
+**Fair Fees** - Transparent 3% fee structure (2% protocol, 1% host)  
+**Full Transparency** - Every room shows creator, odds, and settlement data  
 
 ## Why Solana?
 

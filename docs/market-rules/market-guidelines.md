@@ -3,18 +3,18 @@
 ## Room Creation Rules
 
 ### Allowed
-✅ Cryptocurrency price predictions  
-✅ Market cap predictions  
-✅ Token-specific markets  
-✅ Time-based markets  
-✅ Custom oracle markets  
+Cryptocurrency price predictions  
+Market cap predictions  
+Token-specific markets  
+Time-based markets  
+Custom oracle markets  
 
 ### Not Allowed
-❌ Markets on illegal activities  
-❌ Markets on personal information  
-❌ Markets designed to manipulate  
-❌ Spam or duplicate rooms  
-❌ Misleading or false information  
+Markets on illegal activities  
+Markets on personal information  
+Markets designed to manipulate  
+Spam or duplicate rooms  
+Misleading or false information  
 
 ## Content Guidelines
 

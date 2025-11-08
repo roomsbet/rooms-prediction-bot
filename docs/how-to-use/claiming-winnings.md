@@ -17,7 +17,7 @@ Winners receive payouts automatically - no action required!
 You'll receive a message like:
 
 ```
-🎉 Room Settled!
+Room Settled!
 
 Will SOL reach $165?
 
@@ -25,14 +25,14 @@ Winner: YES
 Your bet: YES
 Result: WON
 
-💰 Payout: 1.94 SOL
-📈 Profit: +0.94 SOL
+Payout: 1.94 SOL
+Profit: +0.94 SOL
 ```
 
 Or if you lost:
 
 ```
-😔 Room Settled!
+Room Settled!
 
 Will SOL reach $165?
 
@@ -40,7 +40,7 @@ Winner: YES
 Your bet: NO
 Result: LOST
 
-📉 Lost: -2.00 SOL
+Lost: -2.00 SOL
 ```
 
 ## Checking Your Winnings
