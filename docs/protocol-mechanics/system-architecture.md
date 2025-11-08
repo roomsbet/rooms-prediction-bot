@@ -279,25 +279,24 @@ If validation fails, user receives error message with correction instructions. O
 
 ## Referral System
 
-Users earn 5% of protocol fees from referred users' bets:
+Users earn 15% of total fees from referred users' bets - one of the most generous referral programs in prediction markets:
 
 **How It Works:**
 
 1. User gets unique referral code (e.g., `REF123ABC`)
 2. Share referral link: `t.me/roomsbot?start=REF123ABC`
 3. Friends sign up via link, referral relationship stored
-4. When friend bets and wins, protocol takes 2% fee
-5. Referrer earns 5% of that fee (0.1% of bet amount)
+4. When friend bets and wins, platform takes 3% total fee
+5. Referrer earns 15% of that fee (0.45% of bet amount)
 6. Credits automatically added to referrer balance
 
 **Example:**
 
 Your friend bets 10 SOL and wins. Payout is 9.7 SOL (after 3% fees).
-- Protocol fee: 0.2 SOL (2% of 10 SOL)
-- Host fee: 0.1 SOL (1% of 10 SOL)
-- Your referral reward: 5% × 0.2 SOL = 0.01 SOL
+- Total fees: 0.3 SOL (3% of 10 SOL)
+- Your referral reward: 15% × 0.3 SOL = 0.045 SOL
 
-Rewards are credited instantly when markets settle. No minimum withdrawal, no expiration. Lifetime earnings tracked in referrals section.
+Rewards are credited instantly when markets settle. No minimum withdrawal, no expiration. Lifetime earnings tracked in referrals section. Multi-level referrals earn 5% (second-level) and 2% (third-level) creating exponential earning potential.
 
 ---
 

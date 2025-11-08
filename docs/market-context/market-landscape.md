@@ -94,7 +94,7 @@ The prediction market total addressable market is estimated at $50B+ annually:
 
 **Telegram Distribution** - 700M+ Telegram users, with high overlap in crypto communities. Our Telegram-native approach removes all onboarding friction for this massive audience.
 
-**Referral Virality** - 5% commission structure incentivizes users to bring friends. Every engaged user becomes a distribution channel.
+**Referral Virality** - 15% commission structure (highest in industry) incentivizes users to bring friends. Every engaged user becomes a distribution channel with multi-level earning potential.
 
 ROOMS is positioned to capture significant market share by being the first platform to solve the UX and instant settlement problems that have limited prediction market adoption.
 
